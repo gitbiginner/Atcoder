@@ -10,7 +10,7 @@ for i in range(N):
 LIM = [24]*(D+1)
 
 for i in range(N):
-    for j in range(L[i],R[i]):
+    for j in range(L[i],R[i]+1):
         LIM[j]  = min(LIM[j], H[i])
 
 Answer = 0
