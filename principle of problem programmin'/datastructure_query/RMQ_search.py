@@ -1,4 +1,4 @@
-from sys import stdin; input = stdin.readline
+#from sys import stdin; input = stdin.readline
  
 SEGLEN = 1<<18
 INF = 0
@@ -33,3 +33,5 @@ for i in range(Q):
 	t, a, b = map(int, input().split())
 	if t==1: update(a-1, b)
 	if t==2: print(get_max(a-1, b-1))
+
+print('SEGLEN  ', SEGLEN )
