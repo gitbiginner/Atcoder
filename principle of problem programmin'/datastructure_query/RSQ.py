@@ -7,19 +7,19 @@ def add(pos, x):
 	seg[pos] = x
 	pos = pos//2
 	while pos:
-		seg[pos] = max(seg[pos*2], seg[pos*2+1])
+		seg[pos] = seg[pos*2] + seg[pos*2+1]
 		pos//= 2
 
-def get_max(l, r):
+def get_sum(l, r):
 	l = l+(1<<18)
 	r = r+(1<<18)
 	ans = 0
 	while l<r:
 		if l % 2 == 1:
-			ans = max(ans, seg[l])
+			ans = ans + seg[l]
 			l+=1
 		if r % 2 == 1:
-			ans = max(ans, seg[r-1])
+			ans = ans + seg[r-1]
 			r-=1
 		l = l//2
 		r = r//2
@@ -32,6 +32,6 @@ for _ in range(Q):
 		add(pos, x)
 	if query[0] == '2':
 		l, r = int(query[1]), int(query[2])
-		print(get_max(l, r))
+		print(get_sum(l, r))
 
 

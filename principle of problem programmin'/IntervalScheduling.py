@@ -12,8 +12,8 @@ CurrentTime = 0
 Answer = 0
 
 for i in range(N):
-    if CurrentTime <= A[i][1]:
-        CurrentTime = A[i][0]
+    if CurrentTime <= A[i][1]:#L
+        CurrentTime = A[i][0] #R
         Answer+=1
 
 print(Answer)
