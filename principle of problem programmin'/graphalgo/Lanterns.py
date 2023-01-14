@@ -32,7 +32,7 @@ while len(q) != 0:
         q.append(t)
 
 print(v[2**N-1])
-
+print('sorry')
 
 
 
