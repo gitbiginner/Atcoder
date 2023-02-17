@@ -7,3 +7,4 @@ for x in range(1, N + 1):
         for z in range(1, N + 1):
             if x + y + z <= M:
                 ans += 1
+#rrr
