@@ -8,3 +8,4 @@ if search:
     print("Yes")
 else:
     print("No")
+# https://algo-method.com/tasks/340/editorial
